@@ -1,8 +1,8 @@
 # DataVisualizationProj
 
-1a. Team Name
-1b. Team Member Names
+1a. CoolTeamName
+1b. Michael Mattson, Albert Mokrejs, Sean Chu.
 
-2. What Data: Polling Data
+2. What Data: Polling Data on the primary race of both parties. 
 
-3. Sources
+3. RealClearPolitics
