@@ -1,9 +1,13 @@
 <script src="d3.v3.min.js"></script>
 
+<body id = "body">
+
 <script>
 var something = function(name, dataset){
     var div = document.createElement("div");
+    var body = document.getElementById("body');
     div.id = name;
+    body.append(div);
     
       (function(d3) {
         'use strict';
@@ -35,5 +39,6 @@ var something = function(name, dataset){
             return color(d.data.label);
           });
       })(window.d3);}
-    </script>
+</script>
     
+</body>
