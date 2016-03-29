@@ -35,5 +35,13 @@
         <button id="switch">Switch</button>
 </body>
 <script src="pieChart.js"></script>
+<script>
+var populatePage = function(target,source){
+  for (x in source){
+    makePieChart(target,x["name"],x["data"]);
+  }
+}
+populatePage("body",FullData)
+</script>
 
 </html>
