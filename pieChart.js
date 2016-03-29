@@ -1,10 +1,17 @@
+var RepublicanNationalPolling = [
+  { label: 'Cruz', count: 31.6 },
+  { label: 'Trump', count: 42.4 },
+  { label: 'Kasich', count: 18.6 },
+];
 var makePieChart = function(target,name, dataset){
+
+
     var div = document.createElement("div");
     var body = document.getElementById(target);
     div.id = name;
     div.text = "<b>" + name + "</b>";
     body.appendChild(div);
-    
+
       (function(d3) {
         'use strict';
         var width = 360;
@@ -17,12 +24,12 @@ var makePieChart = function(target,name, dataset){
           .attr('width', width)
           .attr('height', height)
           .append('g')
-          .attr('transform', 'translate(' + (width / 2) + 
+          .attr('transform', 'translate(' + (width / 2) +
             ',' + (height / 2) + ')');
         var arc = d3.svg.arc()
           .innerRadius(radius - donutWidth)             // NEW
           .outerRadius(radius);
-          
+
         var pie = d3.layout.pie()
           .value(function(d) { return d.count; })
           .sort(null);
@@ -31,7 +38,9 @@ var makePieChart = function(target,name, dataset){
           .enter()
           .append('path')
           .attr('d', arc)
-          .attr('fill', function(d, i) { 
+          .attr('fill', function(d, i) {
             return color(d.data.label);
           });
       })(window.d3);}
+
+makePieChart("body", "RepublicanNationalPolling", RepublicanNationalPolling );
