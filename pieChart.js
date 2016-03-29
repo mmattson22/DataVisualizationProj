@@ -1,8 +1,3 @@
-var FullData = [{name:"Republican Polling Data", data:[
-  { label: 'Cruz', count: 31.6 },
-  { label: 'Trump', count: 42.4 },
-  { label: 'Kasich', count: 18.6 },
-]}];
 var makePieChart = function(target, name, dataset) {
 
 
@@ -115,4 +110,3 @@ var makePieChart = function(target, name, dataset) {
 
         })(window.d3);
     }
-
