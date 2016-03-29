@@ -1,6 +1,6 @@
-var makePieChart = function(name, dataset){
+var makePieChart = function(target,name, dataset){
     var div = document.createElement("div");
-    var body = document.getElementById("body");
+    var body = document.getElementById(target);
     div.id = name;
     body.appendChild(div);
     
