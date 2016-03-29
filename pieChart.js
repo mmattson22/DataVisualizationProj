@@ -2,6 +2,7 @@ var makePieChart = function(target,name, dataset){
     var div = document.createElement("div");
     var body = document.getElementById(target);
     div.id = name;
+    div.text = "<b>" + name + "</b>";
     body.appendChild(div);
     
       (function(d3) {
