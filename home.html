@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-		<script src="pieChart.js" charset="utf-8"></script>
-		<script src="Data.js" charset="utf-8"></script>
-		<title>Election 2016 Piecharts</title>
-	</head>
-	<body id = "body">
 
-		<table id ="table">
-		<br>
-		<button id ="switch">Switch</button>
-	</body>
-	<script src="piechart.js"></script>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="pieChart.js" charset="utf-8"></script>
+    <script src="Data.js" charset="utf-8"></script>
+    <title>Election 2016 Piecharts</title>
+    <style>
+        .legend {
+            font-size: 12px;
+        }
+        
+        rect {
+            stroke-width: 2;
+        }
+        
+        rect.disabled {
+            fill: transparent !important;
+        }
+        
+        #chart {
+            height: 360px;
+            margin: 0 auto;
+            position: relative;
+            width: 360px;
+        }
+    </style>:
+</head>
+
+<body id="body">
+    <table id="table">
+        <br>
+        <button id="switch">Switch</button>
+</body>
+<script src="pieChart.js"></script>
+
 </html>
