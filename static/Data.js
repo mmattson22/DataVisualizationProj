@@ -57,7 +57,7 @@ var RepublicanNationalPolling = [
 
 var fullList = [RepublicanNationalPolling,RepublicanNewYorkPolling,DemocraticNationalPolling,TrumpPopularity,ClintonPopularity,SandersPopularity,DirectionOfCountry,TrustWorthyness,UnTrustWorthyness];
 var fullNames = ["Republican_National_Polling","Republican_NewYork_Polling","Democratic_National_Polling","Trump_Popularity","Clinton_Popularity","Sanders_Popularity","Direction_Of_Country_Polling","Trustworthyness_and_Honesty","Dishonesty"];
-var index = 0;
+var index = 7;
 
 for(var x = 0; x < fullList.length;x++){
   var button = document.createElement("button");
