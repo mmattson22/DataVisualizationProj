@@ -33,10 +33,30 @@ var RepublicanNationalPolling = [
       {label: 'Right Direction', count: 27.7},
       {label: 'Wrong Direction', count: 64.6},
     ];
+    
+    var TrustWorthyness = [
+      {label: 'Sanders', count: 47},
+      {label: 'Carson', count: 39},
+      {label: 'Kasich', count: 31},
+      {label: 'Bush', count: 30},
+      {label: 'Cruz', count: 29},
+      {label: 'Trump', count: 29},
+      {label: 'Rubio', count: 28},
+      {label: 'Clinton', count: 27},];
+      
+      var UnTrustWorthyness = [
+      {label: 'Sanders', count: 24},
+      {label: 'Carson', count: 31},
+      {label: 'Kasich', count: 25},
+      {label: 'Bush', count: 39},
+      {label: 'Cruz', count: 41},
+      {label: 'Trump', count: 52},
+      {label: 'Rubio', count: 37},
+      {label: 'Clinton', count: 56},];
 
 
-var fullList = [RepublicanNationalPolling,RepublicanNewYorkPolling,DemocraticNationalPolling,TrumpPopularity,ClintonPopularity,SandersPopularity,DirectionOfCountry];
-var fullNames = ["RepublicanNationalPolling","RepublicanNewYorkPolling","DemocraticNationalPolling","TrumpPopularity","ClintonPopularity","SandersPopularity","DirectionOfCountry"];
+var fullList = [RepublicanNationalPolling,RepublicanNewYorkPolling,DemocraticNationalPolling,TrumpPopularity,ClintonPopularity,SandersPopularity,DirectionOfCountry,TrustWorthyness,UnTrustWorthyness];
+var fullNames = ["Republican_National_Polling","Republican_NewYork_Polling","Democratic_National_Polling","Trump_Popularity","Clinton_Popularity","Sanders_Popularity","Direction_Of_Country_Polling","Trustworthyness_and_Honesty","Dishonesty"];
 var index = 0;
 
 var button = document.getElementById("switch");
