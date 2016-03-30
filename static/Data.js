@@ -65,7 +65,11 @@ for(var x = 0; x < fullList.length;x++){
   button.value = fullNames[x];
   button.innerHTML = fullNames[x];
   button.addEventListener("click",function(e){
-    index = this.parentElement.childNodes.indexOf(this);
+    console.log(this);
+    console.log(this.parentElement);
+    console.log(this.parentElement.children);
+    console.log(this.parentElement.children.indexOf(this));
+    index = this.parentElement.children.indexOf(this);
   });
   body.removeAttribute("style");
   button.removeAttribute("style");
