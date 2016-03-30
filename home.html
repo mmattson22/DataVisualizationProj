@@ -4,24 +4,24 @@
 <head>
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-  
- 
+
+
     <title>Election 2016 Piecharts</title>
     <style>
         .legend {
             font-size: 12px;
         }
-        
+
         rect {
             stroke-width: 2;
         }
-        
+
         rect.disabled {
             fill: transparent !important;
         }
-        
+
         #chart {
-            
+
         }
     </style>:
 </head>
@@ -50,8 +50,8 @@ var makePieChart = function(target, name, dataset) {
 	headthing.style.textAlign = "center";
 	div.appendChild(headthing);
         body.appendChild(div);
-	
-	
+
+
 
         (function(d3) {
             'use strict';
@@ -61,8 +61,8 @@ var makePieChart = function(target, name, dataset) {
             var color = d3.scale.category20b();
 
 
-            dataset.forEach(function(d) { 
-                d.enabled = true; 
+            dataset.forEach(function(d) {
+                d.enabled = true;
             });
 
             var svg = d3.select('#' + name)
@@ -79,7 +79,7 @@ var makePieChart = function(target, name, dataset) {
             svg.style.width = "360px";
 
             var arc = d3.svg.arc()
-                .innerRadius(radius - 75) 
+                .innerRadius(radius - 75)
                 .outerRadius(radius);
 
             var pie = d3.layout.pie()
@@ -118,38 +118,38 @@ var makePieChart = function(target, name, dataset) {
                 .attr('height', 18)
                 .style('fill', color)
                 .style('stroke', color) // UPDATED (removed semicolon)
-                .on('click', function(label) { 
-                    var rect = d3.select(this); 
-                    var enabled = true; 
-                    var totalEnabled = d3.sum(dataset.map(function(d) { 
-                        return (d.enabled) ? 1 : 0; 
-                    })); 
+                .on('click', function(label) {
+                    var rect = d3.select(this);
+                    var enabled = true;
+                    var totalEnabled = d3.sum(dataset.map(function(d) {
+                        return (d.enabled) ? 1 : 0;
+                    }));
 
-                    if (rect.attr('class') === 'disabled') { 
-                        rect.attr('class', ''); 
-                    } else { 
-                        if (totalEnabled < 2) return; 
-                        rect.attr('class', 'disabled'); 
-                        enabled = false; 
-                    } 
+                    if (rect.attr('class') === 'disabled') {
+                        rect.attr('class', '');
+                    } else {
+                        if (totalEnabled < 2) return;
+                        rect.attr('class', 'disabled');
+                        enabled = false;
+                    }
 
-                    pie.value(function(d) { 
-                        if (d.label === label) d.enabled = enabled; 
-                        return (d.enabled) ? d.count : 0; 
-                    }); 
+                    pie.value(function(d) {
+                        if (d.label === label) d.enabled = enabled;
+                        return (d.enabled) ? d.count : 0;
+                    });
 
-                    path = path.data(pie(dataset)); 
+                    path = path.data(pie(dataset));
 
-                    path.transition() 
-                        .duration(750) 
-                        .attrTween('d', function(d) { 
-                            var interpolate = d3.interpolate(this._current, d); 
-                            this._current = interpolate(0); 
-                            return function(t) { 
-                                return arc(interpolate(t)); 
-                            }; 
-                        }); 
-                }); 
+                    path.transition()
+                        .duration(750)
+                        .attrTween('d', function(d) {
+                            var interpolate = d3.interpolate(this._current, d);
+                            this._current = interpolate(0);
+                            return function(t) {
+                                return arc(interpolate(t));
+                            };
+                        });
+                });
 
             legend.append('text')
                 .attr('x', 22)
