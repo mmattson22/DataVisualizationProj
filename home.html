@@ -7,35 +7,22 @@
 
 
     <title>Election 2016 Piecharts</title>
-    <style>
-        .legend {
-            font-size: 12px;
-        }
-
-        rect {
-            stroke-width: 2;
-        }
-
-        rect.disabled {
-            fill: transparent !important;
-        }
-
-        #chart {
-
-        }
-    </style>:
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+    <h1 id="heading"></h1>
+    <div id ="placeholder">
+    <button id="switch">Switch</button>
+    </div>
     <table id="table">
-        <tr><td><br>
-        <button id="switch">Switch</button>
+    <tr><td><br>
 	</td></tr>
 	<tr>
 	<td id ="body">
 	</td>
 	</tr>
-     </table>
+    </table>
 </body>
 <script>
 
@@ -45,10 +32,8 @@ var makePieChart = function(target, name, dataset) {
         var div = document.createElement("div");
         var body = document.getElementById(target);
         div.id = name;
-	var headthing = document.createElement("h1");
-	headthing.innerHTML = name;
-	headthing.style.textAlign = "center";
-	div.appendChild(headthing);
+	    var headthing = document.getElementById("heading");
+	    headthing.innerHTML = name;
         body.appendChild(div);
 
 

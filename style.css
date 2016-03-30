@@ -1,6 +1,33 @@
 #table{
 	width: 500px;
 	height:500px;
-	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.legend {
+            font-size: 12px;
 }
 
+rect {
+            stroke-width: 2;
+}
+
+rect.disabled {
+            fill: transparent !important;
+}
+
+#heading{
+	text-align: center;
+}
+
+#body{
+	text-align: center;
+}
+
+#placeholder{
+	text-align: center;
+}
+
+body{
+	background-image: url("politics.jpg");
+}
