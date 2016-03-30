@@ -59,6 +59,15 @@ var fullList = [RepublicanNationalPolling,RepublicanNewYorkPolling,DemocraticNat
 var fullNames = ["Republican_National_Polling","Republican_NewYork_Polling","Democratic_National_Polling","Trump_Popularity","Clinton_Popularity","Sanders_Popularity","Direction_Of_Country_Polling","Trustworthyness_and_Honesty","Dishonesty"];
 var index = 0;
 
+for(var x = 0; x < fullList.length;x++){
+  var button = document.createElement("button");
+  var body = document.getElementById("buttonDiv");
+  var button.innerHTML = fullNames[x];
+  button.addEventListener("click",function(e){
+    index = fullNames.indexOf(this.innerHTML);
+  });
+  };
+
 var button = document.getElementById("switch");
 button.addEventListener("click",function(e){
   var body = document.getElementById("body");
