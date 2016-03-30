@@ -62,10 +62,11 @@ var index = 0;
 for(var x = 0; x < fullList.length;x++){
   var button = document.createElement("button");
   var body = document.getElementById("buttonDiv");
-  var button.innerHTML = fullNames[x];
+  button.value = fullNames[x];
   button.addEventListener("click",function(e){
-    index = fullNames.indexOf(this.innerHTML);
+    index = fullNames.indexOf(this.value);
   });
+  body.appendChild(button);
   };
 
 var button = document.getElementById("switch");
