@@ -18,3 +18,18 @@ var TrumpPopularity = [
   {label: 'Unfavorable', count: 63}
   {label: 'Favorable', count: 30}
 ]
+
+var ClintonPopularity = [
+  {label: 'Unfavorable', count: 53.9}
+  {label: 'Favorable', count: 40.7}
+]
+
+var SandersPopularity = [
+  {label: 'Unfavorable', count: 41.3}
+  {label: 'Favorable', count: 48.7}
+]
+
+var DirectionOfCountry = [
+  {label: 'Right Direction', count: 27.7}
+  {label: 'Wrong Direction', count: 64.6}
+]
