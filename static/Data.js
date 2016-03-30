@@ -68,7 +68,7 @@ for(var x = 0; x < fullList.length;x++){
     var indexList = this.parentElement.children;
     for(var y = 0; y < indexList.length;y++){
       if(this === indexList[y]){
-        index = y - 1 - Math.floor((y-1)/4);
+        index = y - 1 - Math.floor((y-1)/3);
       };
     };
     var body = document.getElementById("body");
@@ -81,7 +81,7 @@ for(var x = 0; x < fullList.length;x++){
   body.removeAttribute("style");
   button.removeAttribute("style");
   body.appendChild(button);
-  if(x % 3 == 0){
+  if(x % 2 == 0){
   brk = document.createElement("br");
   body.appendChild(brk);
   };
