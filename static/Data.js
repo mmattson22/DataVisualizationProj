@@ -63,12 +63,13 @@ for(var x = 0; x < fullList.length;x++){
   var button = document.createElement("button");
   var body = document.getElementById("buttonDiv");
   button.value = fullNames[x];
+  button.innerHTML = fullNames[x];
   button.addEventListener("click",function(e){
     index = this.parentElement.childNodes.indexOf(this);
   });
-  body.appendChild(button);
   body.removeAttribute("style");
   button.removeAttribute("style");
+  body.appendChild(button);
   };
 
 var button = document.getElementById("switch");
