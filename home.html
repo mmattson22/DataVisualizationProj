@@ -162,19 +162,45 @@ var makePieChart = function(target, name, dataset) {
         })(window.d3);
     }
 
-var FullData = [
-  { label: 'Cruz', count: 31.6 },
-  { label: 'Trump', count: 42.4 },
-  { label: 'Kasich', count: 18.6 },
-];
-var DataTwo = [
-  { label: 'Red', count: 344 },
-  { label: 'Blue', count: 2.4 },
-  { label: 'Green', count: 90 },
-];
+    var RepublicanNationalPolling = [
+      { label: 'Cruz', count: 31.6 },
+      { label: 'Trump', count: 42.4 },
+      { label: 'Kasich', count: 18.6 },
+    ];
 
-var fullList = [FullData,DataTwo];
-var fullNames = ["FullData","DataTwo"];
+    var RepublicanNewYorkPolling = [
+      { label: 'Cruz', count: 13},
+      { label: 'Trump', count: 53},
+      { label: 'Kasich', count: 14.3},
+    ];
+    var DemocraticNationalPolling = [
+      { label: 'Clinton', count: 50.8 },
+      { label: 'Sanders', count: 43.6},
+    ];
+
+    var TrumpPopularity = [
+      {label: 'Unfavorable', count: 63},
+      {label: 'Favorable', count: 30},
+    ];
+
+    var ClintonPopularity = [
+      {label: 'Unfavorable', count: 53.9},
+      {label: 'Favorable', count: 40.7},
+    ];
+
+    var SandersPopularity = [
+      {label: 'Unfavorable', count: 41.3},
+      {label: 'Favorable', count: 48.7},
+    ];
+
+    var DirectionOfCountry = [
+      {label: 'Right Direction', count: 27.7},
+      {label: 'Wrong Direction', count: 64.6},
+    ];
+
+
+var fullList = [RepublicanNationalPolling,RepublicanNewYorkPolling,DemocraticNationalPolling,TrumpPopularity,ClintonPopularity,SandersPopularity,DirectionOfCountry];
+var fullNames = ["Republican National Polling","Republican New York Polling","Democratic National Polling","Trump Popularity","Clinton Popularity","Sanders Popularity","Direction Of Country"];
 var index = 0;
 
 var button = document.getElementById("switch");
