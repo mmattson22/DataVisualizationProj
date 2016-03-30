@@ -17,14 +17,14 @@ rect.disabled {
 }
 
 button {
-    background-color: #4CAF50; /* Green */
+    background-color: #0000FF;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 6px 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 #heading{
