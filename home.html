@@ -162,11 +162,11 @@ var makePieChart = function(target, name, dataset) {
         })(window.d3);
     }
 
-    var RepublicanNationalPolling = [
-      { label: 'Cruz', count: 31.6 },
-      { label: 'Trump', count: 42.4 },
-      { label: 'Kasich', count: 18.6 },
-    ];
+var RepublicanNationalPolling = [
+  { label: 'Cruz', count: 31.6 },
+  { label: 'Trump', count: 42.4 },
+  { label: 'Kasich', count: 18.6 },
+];
 
     var RepublicanNewYorkPolling = [
       { label: 'Cruz', count: 13},
@@ -200,7 +200,7 @@ var makePieChart = function(target, name, dataset) {
 
 
 var fullList = [RepublicanNationalPolling,RepublicanNewYorkPolling,DemocraticNationalPolling,TrumpPopularity,ClintonPopularity,SandersPopularity,DirectionOfCountry];
-var fullNames = ["Republican National Polling","Republican New York Polling","Democratic National Polling","Trump Popularity","Clinton Popularity","Sanders Popularity","Direction Of Country"];
+var fullNames = ["RepublicanNationalPolling","RepublicanNewYorkPolling","DemocraticNationalPolling","TrumpPopularity","ClintonPopularity","SandersPopularity","DirectionOfCountry"];
 var index = 0;
 
 var button = document.getElementById("switch");
