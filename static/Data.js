@@ -71,6 +71,12 @@ for(var x = 0; x < fullList.length;x++){
         index = y;
       };
     };
+    var body = document.getElementById("body");
+  while (body.firstChild) {
+    body.removeChild(body.firstChild);
+  }
+  makePieChart("body",fullNames[index],fullList[index]);
+    
   });
   body.removeAttribute("style");
   button.removeAttribute("style");
