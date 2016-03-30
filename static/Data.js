@@ -68,7 +68,7 @@ for(var x = 0; x < fullList.length;x++){
     var indexList = this.parentElement.children;
     for(var y = 0; y < indexList.length;y++){
       if(this === indexList[y]){
-        index = y - Math.floor(y/3);
+        index = y - Math.floor(y/4);
       };
     };
     var body = document.getElementById("body");
