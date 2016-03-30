@@ -82,7 +82,7 @@ for(var x = 0; x < fullList.length;x++){
   button.removeAttribute("style");
   body.appendChild(button);
   if(x % 3 == 0){
-  brk = document.creatElement("br");
+  brk = document.createElement("br");
   body.appendChild(brk);
   };
   };
